@@ -1,0 +1,95 @@
+ body{
+      background-color: white;
+    } 
+
+  /*Navbar*/
+.navbar{
+  background-color: white;
+}
+.navbar a{
+  color: white;
+}
+.navbar-nav.navbar-center { 
+  position: absolute; 
+  left: 50%; 
+  transform: translatex(-50%); 
+} 
+.navbar-nav.navbar-center li a{
+  color: white;
+}
+  /*Navbar*/
+
+
+  /*Introduction*/
+
+#row1{
+  width: 100%;
+  margin: 10% 1% 10% 1%;
+}
+#intro1{
+  width: 50%;
+  float: left;
+}
+#intro2{
+  width: 50%;
+  float: right;
+}  
+#intro2 img{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-left: 30%;
+} 
+  
+  /*Introduction*/
+
+  /*About me*/
+
+#row2{
+  width: 100%;
+ /*  margin: 10% 1% 10% 1%; */
+  margin-top: 10%;
+}
+#about1{
+  width: 50%;
+  float: left;
+}
+#about2{
+  width: 50%;
+  float: right;
+}  
+#about1 img{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-right: 70%;
+  padding-right: 20%;
+}      
+#about2 h1{
+  float:right;
+}
+
+  /*About me*/
+
+  /*Contact*/
+
+#row3{
+  width: 100%;
+  margin: 10% 1% 10% 1%;
+}
+#contact1{
+  width: 50%;
+  float: left;
+}
+#contact2{
+  width: 50%;
+  float: right;
+}  
+#contact2 img{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-left: 30%;
+} 
+      
+    /*Contact*/
