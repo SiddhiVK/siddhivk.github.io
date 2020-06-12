@@ -1,95 +1,58 @@
- body{
-      background-color: white;
-    } 
-
-  /*Navbar*/
-.navbar{
-  background-color: white;
+section{
+  display: block;
 }
-.navbar a{
-  color: white;
+
+div{
+  display: block;
 }
-.navbar-nav.navbar-center { 
-  position: absolute; 
-  left: 50%; 
-  transform: translatex(-50%); 
-} 
-.navbar-nav.navbar-center li a{
-  color: white;
+
+#home{
+  position: relative;
+  height: 100%;
+  min-height: 934px;
+  background-image: url(../images/grayscale-photo-of-volcano-997443.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-  /*Navbar*/
 
-
-  /*Introduction*/
-
-#row1{
+.page-table{
+  display: table;
   width: 100%;
-  margin: 10% 1% 10% 1%;
+  height: 100%;
 }
-#intro1{
-  width: 50%;
-  float: left;
+
+.table-cell{
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 20px;
+  z-index: 5;
 }
-#intro2{
-  width: 50%;
-  float: right;
-}  
-#intro2 img{
+
+.text-center{
+  text-align: center;
+}
+
+.portfolio-img img{
+  margin: 160px auto 0px auto;
+  border: solid 3px #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.52);
+}
+
+img{
+  /*display: block;*/
   max-width: 100%;
-  width: 100%;
   height: auto;
-  margin-left: 30%;
-} 
-  
-  /*Introduction*/
-
-  /*About me*/
-
-#row2{
-  width: 100%;
- /*  margin: 10% 1% 10% 1%; */
-  margin-top: 10%;
-}
-#about1{
-  width: 50%;
-  float: left;
-}
-#about2{
-  width: 50%;
-  float: right;
-}  
-#about1 img{
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  margin-right: 70%;
-  padding-right: 20%;
-}      
-#about2 h1{
-  float:right;
+  vertical-align: middle;
 }
 
-  /*About me*/
-
-  /*Contact*/
-
-#row3{
-  width: 100%;
-  margin: 10% 1% 10% 1%;
+#home h1{
+  color: #ffffff;
+  margin-top: 1%;
+  font-weight: bold;
 }
-#contact1{
-  width: 50%;
-  float: left;
+
+#home h3{
+  color: #ffffff;
 }
-#contact2{
-  width: 50%;
-  float: right;
-}  
-#contact2 img{
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  margin-left: 30%;
-} 
-      
-    /*Contact*/
