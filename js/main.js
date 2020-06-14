@@ -1,14 +1,3 @@
-/*=========================================================================
-
-Template Name: IMOZAR - Personal Portfolio Template
-Author: PhyDev
-Author Link: https://themeforest.net/user/phydev;
-Version: 1.0
-Design and Developed by: PhyDev
-
-NOTE: This is the main javascript file for the template
-
-=========================================================================*/
 
 $(function(){
 "use strict";
@@ -124,109 +113,6 @@ $(function(){
     }
 
 
-/*---------------------------------------------------------------------
-  Javascript Function For Sticky Navigation Bar AND SMOOTH SCROLLING
-----------------------------------------------------------------------*/
-
-    // Define stikyNav Function
-    function stikyNav() {
-
-      top = allWindow.scrollTop();
-
-      if ( top >= 100 ) {
-        navBar.addClass("nav-sticky");
-
-      } else {
-        navBar.removeClass("nav-sticky");
-      }
-
-      // SHow Also Scroll up Button
-      if ( top >= 1000 ) {
-        $('.scroll-up').addClass("show-up-btn");
-      } else {
-        $('.scroll-up').removeClass("show-up-btn");
-      }
-    }
-
-    // Select all links with hashes
-    $('a.scroll').on('click', function(event) {
-        // On-page links
-        if ( location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname ) {
-          // Figure out element to scroll to
-          var target = $(this.hash),
-              speed= $(this).data("speed") || 800;
-              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-          // Does a scroll target exist?
-          if (target.length) {
-            // Only prevent default if animation is actually gonna happen
-            event.preventDefault();
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, speed);
-          }
-        }
-    });
-
-    $(".scroll-up").on('click', function (e) {
-      e.preventDefault();
-      $('html, body').animate({
-        scrollTop: 0
-      }, 900);
-    });
-    
-
-/*---------------------------------------------------------------------
-  Javascript Function for Hide Navbar Dropdown After Click On Links
--------------------------------------------------------------------*/
-
-    var navLinks = navBar.find(".navbar-collapse ul li a");
-
-    $.each( navLinks, function( i, val ) {
-
-      var navLink = $(this);
-
-        navLink.on('click', function (e) {
-          navBar.find(".navbar-collapse").collapse('hide');
-        });
-
-    });
-
-
-/*----------------------------------------------------------------
-  Javascript Function For Change active Class on navigation bar
------------------------------------------------------------------*/
-
-    var sections = $('.one-page-section'),
-        navList = navBar.find("ul.navbar-nav");
-
-    // Define ChangeClass Function
-    function ChangeClass() {
-
-      top = allWindow.scrollTop();
-
-        $.each(sections, function(i,val) {
-
-          var section = $(this),
-              section_top = section.offset().top - 10,
-              bottom = section_top + section.height();
-
-            if (top >= section_top && top <= bottom) {
-
-              var naItems = navList.find('li');
-
-              $.each(naItems ,function(i,val) {
-                var item = $(this);
-                item.find("a").removeClass("active");
-              });
-
-              navList.find('li [href="#' + section.attr('id') + '"]').addClass('active');
-            }
-
-        });
-
-    } // End of ChangeClass Function
-
 
 /*---------------------------------------------------
   Javascript Function FOR PARALLAX EFFECT
@@ -259,48 +145,13 @@ $(function(){
     };
 
 
-/*-----------------------------------------------------------------
-  Javascript Function for PROGRESS BAR LINES  SCRIPT
-------------------------------------------------------------------*/
-
-    var linesHead = $(".skills-section"),
-        line = $(".progress-bar-line");
-        
-    //Progress Bars function
-    function progressFunction(e) {
-
-      if ( linesHead.length ) {
-
-        if (!linesHead.hasClass("done")) {
-
-          var linesHeadTop = linesHead.offset().top,
-              top = allWindow.scrollTop(),
-              winH = allWindow.height() - 160;
-
-          if (top >= linesHeadTop - winH) {
-
-            linesHead.addClass("done");
-            $.each( line, function( i, val ) {
-
-            var thisLine = $(this),
-              value = thisLine.data("percent"),
-              progressCont = $(thisLine).closest('.progress-bar-linear').find(".progress-cont span");
-
-              thisLine.css("width",value + "%");
-              progressCont.html(value + "%")
-
-            });
-          }
-        }
-      }
-    } //End progressFunction Fuction
 
 
     function scrollFunctions() {
       stikyNav();
       ChangeClass();
       parallax();
-      progressFunction();
+     // progressFunction();
     }
 
     // add Event listener to window
@@ -327,128 +178,5 @@ $(function(){
     }
 
 
-/*----------------------------------------------------------------------
- Javascript Function Initialize Particules
------------------------------------------------------------------------*/
-
-    if ( typeof particlesJS !== "undefined") {
-
-      particlesJS('particles-js', {
-          "particles": {
-            "number": {
-              "value": 80,
-              "density": {
-                "enable": true,
-                "value_area": 600
-              }
-            },
-            "color": {
-              "value": '#777',
-            },
-            "shape": {
-              "type": "circle",
-              "stroke": {
-                "width": 0,
-                "color": "#fff"
-              },
-              "polygon": {
-                "nb_sides": 5
-              },
-              "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-              }
-            },
-            "opacity": {
-              "value": 0.7,
-              "random": false,
-              "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-              }
-            },
-            "size": {
-              "value": 4,
-              "random": true,
-              "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-              }
-            },
-            "line_linked": {
-              "enable": true,
-              "distance": 150,
-              "color": "#bbb",
-              "opacity": 0.4,
-              "width": 1
-            },
-            "move": {
-              "enable": true,
-              "speed": 4,
-              "direction": "bottom",
-              "random": false,
-              "straight": false,
-              "out_mode": "out",
-              "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-              }
-            }
-          },
-          "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-              "onhover": {
-                "enable": true,
-                "mode": "repulse"
-              },
-              "onclick": {
-                "enable": true,
-                "mode": "push"
-              },
-              "resize": true
-            },
-            "modes": {
-              "grab": {
-                "distance": 400,
-                "line_linked": {
-                  "opacity": 1
-                }
-              },
-              "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-              },
-              "repulse": {
-                "distance": 200
-              },
-              "push": {
-                "particles_nb": 4
-              },
-              "remove": {
-                "particles_nb": 2
-              }
-            }
-          },
-          "retina_detect": true,
-          "config_demo": {
-            "hide_card": false,
-            "background_color": "#b61924",
-            "background_image": "",
-            "background_position": "50% 50%",
-            "background_repeat": "no-repeat",
-            "background_size": "cover"
-          }
-        });
-    }
 
 });
