@@ -9,26 +9,34 @@
 
 </head>
 <body>
-<!-- 
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">SiddhiVK</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav navbar-right">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+
+  <header class="nav-wrapper effect">
+    <nav class="navbar-custom">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bm-navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand effect">SiddhiVK</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bm-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home" class="scroll effect active" data-speed="800">HOME</a></li>
+                    <li><a href="#about" class="scroll effect" data-speed="1000">ABOUT</a></li>
+                    <li><a href="#contact" class="scroll effect" data-speed="1700">CONTACT</a></li>
+                </ul>
+            </div><!-- End navbar-collapse -->
+
+        </div><!-- End container -->
     </nav>
-  </header>
- -->
+</header>
   
 
   <section id="home" class="home-1 parallax one-page-section">
@@ -43,10 +51,61 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" class="section one-page-section">
+    <div class="container">
+        <div class="row">
 
-  </section>
+            <div class="col-xs-12 col-md-6">
+                <div class="about-content">
+                    <h2>Hi There! I'm Siddhi Kulkarni</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
 
+            <div class="col-xs-12 col-md-6 skills-section">
+
+                <div class="progress-bar-linear">
+                    <p class="progress-bar-text">PYTHON</p>
+                    <div class="progress-cont">
+                        <span class="main-color progress-bar-text">90%</span>
+                    </div>
+                    <div class="progress-bar-skills">
+                        <div class="progress-bar-line main-color-bg" data-percent="90"></div>
+                    </div>
+                </div>
+                <div class="progress-bar-linear">
+                    <p class="progress-bar-text">HTML5 , CSS3</p>
+                    <div class="progress-cont">
+                        <span class="main-color progress-bar-text">70%</span>
+                    </div>
+                    <div class="progress-bar-skills">
+                        <div class="progress-bar-line main-color-bg" data-percent="70"></div>
+                    </div>
+                </div>
+                <div class="progress-bar-linear">
+                    <p class="progress-bar-text">ABC</p>
+                    <div class="progress-cont">
+                        <span class="main-color progress-bar-text">86%</span>
+                    </div>
+                    <div class="progress-bar-skills">
+                        <div class="progress-bar-line main-color-bg" data-percent="86"></div>
+                    </div>
+                </div>
+                <div class="progress-bar-linear">
+                    <p class="progress-bar-text">XYZ</p>
+                    <div class="progress-cont">
+                        <span class="main-color progress-bar-text">94%</span>
+                    </div>
+                    <div class="progress-bar-skills">
+                        <div class="progress-bar-line main-color-bg" data-percent="94"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> <!-- End Row -->
+    </div> <!-- End Container -->
+</section>
 
   <script src="js/jquery.min.js"></script>
   <!-- Bootstrap JS -->
