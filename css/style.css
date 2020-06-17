@@ -157,7 +157,13 @@ img{
   color: #ffffff;
 }
 
-#about{
+#about > div > div.section-title > h1{
+	text-align: center;
+	margin-top: 3%;
+	font-weight: bolder;
+}
+
+#about-section{
 	margin-top: 5%;
 }
 
@@ -226,3 +232,81 @@ img{
     -moz-border-radius: 12px;
     border-radius: 12px;
 }
+
+#contact > div > div.section-title > h1{
+	text-align: center;
+	font-weight: bolder;
+}
+.footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	background-color: #000000;
+}
+.footer-title {
+	display: inline-block;
+	margin-bottom: 6px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.footer .copy-text {
+    margin: 8px 0;
+    font-size: 15px;
+	text-transform: capitalize;
+	color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+
+	.nav-wrapper {
+	    padding: 20px 0;
+	}
+	.nav-sticky .navbar-collapse {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	.nav-wrapper .nav li a:after {
+		display: block;
+	}
+
+	.avatar-hero img {
+		width: 170px;
+	}
+	#home h1 {
+		font-size: 50px;
+	}
+	#home .typer-title {
+		font-size: 26px;
+	}
+
+	.home-slider-btn {
+	    display: block;
+	    opacity: 0;
+	}
+	.home-carousel:hover .home-slider-btn {
+	    opacity: .8;
+	}
+	.home-carousel:hover .owl-next.disabled .home-slider-btn,
+	.home-carousel:hover .owl-prev.disabled .home-slider-btn {
+		opacity: .4;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.skills-section {
+		padding-left: 20px;
+	}
+
+	.single-service.bordered {
+		border-right: 1px solid #dfdfdf;
+		border-left: 1px solid #dfdfdf;
+	}
+	.services-separator {
+		display: block;
+	}
+
+}
+
