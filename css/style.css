@@ -9,6 +9,13 @@ section{
 div{
   display: block;
 }
+
+a, a:focus, a:hover, a:active {
+	text-decoration: none;
+	color: black;
+	outline: none;
+}
+
 .nav-wrapper {
 	width: 100%;
 	padding: 6px 0;
@@ -55,14 +62,6 @@ div{
 	-moz-transition: all .28s ease-in-out;
 	transition: all .28s ease-in-out;
 }
-.nav-wrapper .nav>li>a:hover,
-.nav-wrapper .nav>li>a.active {
-	background-color: transparent;
-}
-.nav-wrapper .nav>li>a:hover:after,
-.nav-wrapper .nav>li>a.active:after {
-	width: 80%;
-}
 .nav-wrapper .nav>li>a:focus {
 	background-color: transparent;
 }
@@ -86,7 +85,6 @@ div{
 	-moz-box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
 	box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
 }
-
 
 #home{
   position: relative;
@@ -262,12 +260,13 @@ img{
 #contact > div > div.section-title > h1{
 	text-align: center;
 	font-weight: bolder;
+	margin-bottom: 2%;
 }
 
 .social-list {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	padding-left: 43%;
+	padding-left: 43.5%;
 }
 .social-list li {
 	display: inline-block;
@@ -357,7 +356,7 @@ img{
 
 }
 
-@media screen and (min-width: 400px){
+@media screen and (max-width: 400px){
 
 	#home{
 		position: relative;
@@ -368,7 +367,7 @@ img{
 		background-size: cover;
 	  }
 
-	.social-list {
+	  .social-list {
 		margin-top: 20px;
 		margin-bottom: 20px;
 		padding-left: 30%;

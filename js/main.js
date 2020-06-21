@@ -186,35 +186,35 @@ $(function(){
   Javascript Function For Change active Class on navigation bar
 -----------------------------------------------------------------*/
 
-    var sections = $('.one-page-section'),
-        navList = navBar.find("ul.navbar-nav");
+var sections = $('.one-page-section'),
+navList = navBar.find("ul.navbar-nav");
 
-    // Define ChangeClass Function
-    function ChangeClass() {
+// Define ChangeClass Function
+function ChangeClass() {
 
-      top = allWindow.scrollTop();
+top = allWindow.scrollTop();
 
-        $.each(sections, function(i,val) {
+$.each(sections, function(i,val) {
 
-          var section = $(this),
-              section_top = section.offset().top - 10,
-              bottom = section_top + section.height();
+  var section = $(this),
+      section_top = section.offset().top - 10,
+      bottom = section_top + section.height();
 
-            if (top >= section_top && top <= bottom) {
+    if (top >= section_top && top <= bottom) {
 
-              var naItems = navList.find('li');
+      var naItems = navList.find('li');
 
-              $.each(naItems ,function(i,val) {
-                var item = $(this);
-                item.find("a").removeClass("active");
-              });
+      $.each(naItems ,function(i,val) {
+        var item = $(this);
+        item.find("a").removeClass("active");
+      });
 
-              navList.find('li [href="#' + section.attr('id') + '"]').addClass('active');
-            }
+      navList.find('li [href="#' + section.attr('id') + '"]').addClass('active');
+    }
 
-        });
+});
 
-    } // End of ChangeClass Function
+} // End of ChangeClass Function
 
 
 
