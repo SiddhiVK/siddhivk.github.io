@@ -341,10 +341,14 @@ img{
 	.skills-section {
 		padding-left: 20px;
 	}
+	/* .social-list {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding-left: 80%;
+	}
+} */
 
-}
-
-@media screen and (min-width: 400px){
+@media screen and (max-width: 400px){
 
 	#home{
 		position: relative;
