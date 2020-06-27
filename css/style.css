@@ -266,11 +266,12 @@ img{
 .social-list {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	padding-left: 43.5%;
+	padding-left: 37%;
 }
 .social-list li {
 	display: inline-block;
 	margin: 4px;
+	margin-right: 5%;
 }
 .social-list li a {
 	display: inline-block;
